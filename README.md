@@ -2,13 +2,13 @@
 
 ## Description
 
-Cette application permet de simplifier le processus de location et de vente d'appartement. Elle met en relation les client et les agents immobilier de manière fluide.
+Projet de gestion des utilisateurs et des posts utilisant React Admin et un backend JSON Server.
 
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé :
 
-- [Node Js](https://www.php.net/manual/fr/install.php) (version 8.3 ou supérieure)
+- [Node Js](https://nodejs.org/en/download) (version 22 ou supérieure)
 
 ## Installation
 1. **Clonez le dépôt :**
@@ -31,7 +31,7 @@ Avant de commencer, assurez-vous d'avoir installé :
        
 ## Production
 
-Build the application in production mode by running:
+Builder l'application en production:
 
 ```sh
 npm run build
