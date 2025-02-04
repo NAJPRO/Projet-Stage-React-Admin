@@ -28,7 +28,7 @@ const myCustomTheme = createTheme({
       divider: '#32fa24',
     },
     typography: {
-      fontFamily: 'Roboto, sans-serif', 
+      fontFamily: 'Montserrat, sans-serif', 
       h1: {
         fontSize: '2.5rem',
         fontWeight: 500,

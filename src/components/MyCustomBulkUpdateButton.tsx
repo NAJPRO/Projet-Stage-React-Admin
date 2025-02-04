@@ -14,7 +14,7 @@ const MyCustomBulkUpdateButton = () => {
     const [confirmOpen, setConfirmOpen] = useState(false);
     const [newStatus, setNewStatus] = useState('');
 
-    const handleClick = (status) => {
+    const handleClick = (status: string) => {
         setNewStatus(status);
         setConfirmOpen(true);
     };

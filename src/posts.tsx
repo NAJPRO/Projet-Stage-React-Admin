@@ -1,4 +1,4 @@
-import { Datagrid, DateField, DateInput, EditButton, List, ReferenceField, ReferenceInput, SimpleForm, TextField, TextInput, Edit, Create, SelectInput, DeleteButton, DeleteWithConfirmButton, BulkDeleteWithConfirmButton, ShowButton, Show, SimpleShowLayout } from 'react-admin';
+import { Datagrid, DateField, DateInput, EditButton, List, ReferenceField, ReferenceInput, SimpleForm, TextField, TextInput, Edit, Create, SelectInput, DeleteWithConfirmButton, BulkDeleteWithConfirmButton, ShowButton, Show, SimpleShowLayout, required } from 'react-admin';
 import {PostStatusField} from './components/MyStatusField';
 
 /**
@@ -12,8 +12,8 @@ const postFilter = [
         source="status" 
         label="Statut" 
         choices={[
-            { id: 'draft', name: 'Publié' },
-            { id: 'published', name: 'Brouillon' }
+            { id: 'published', name: 'Publié' },
+            { id: 'draft', name: 'Brouillon' }
         ]}
     />
 ];
@@ -73,8 +73,8 @@ export const PostEdit = () => (
 export const PostCreate = () => (
     <Create redirect="list">
         <SimpleForm>
-            <TextInput source="title" />
-            <ReferenceInput source="userId" reference="users" />
+            <TextInput source="title" validate={required()} />
+            <ReferenceInput source="userId" reference="users" validate={required()} />
             <DateInput source="date" />
             <SelectInput 
                 source="status" 
@@ -83,8 +83,9 @@ export const PostCreate = () => (
                     { id: 'draft', name: 'Draft' },
                     { id: 'published', name: 'Published' }
                 ]}
+                validate={required()} 
             />
-            <TextInput source="content" multiline rows={5}/>
+            <TextInput source="content" multiline rows={3}/>
         </SimpleForm>
     </Create>
 );

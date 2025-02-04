@@ -1,5 +1,5 @@
 import { Theme, useMediaQuery } from '@mui/material';
-import {BulkUpdateWithConfirmButton, Create, Datagrid, DeleteWithConfirmButton, Edit, EditButton, EmailField, List, SelectInput, Show, SimpleForm, SimpleList, SimpleShowLayout, TextField, TextInput } from 'react-admin';
+import { Create, Datagrid, DeleteWithConfirmButton, Edit, EditButton, EmailField, List, SelectInput, Show, SimpleForm, SimpleList, SimpleShowLayout, TextField, TextInput } from 'react-admin';
 import MyCustomBulkUpdateButton from './components/MyCustomBulkUpdateButton';
 import {UserStatusField} from './components/MyStatusField';
 
@@ -22,19 +22,8 @@ const usersFilter = [
     />
 ];
 
-const MyBulkActionPerso = (props) => {
-    return (
-        <BulkUpdateWithConfirmButton
-            confirmTitle="Confirmation"
-            confirmContent="Êtes-vous sûr de vouloir activer ces éléments ?"
-            label="Activate"
-            data={{ status: 'active' }} // Ajout de la clé "status" pour l'update
-            {...props} // Props passées au composant 
-        />
-    );
-};
-export default MyBulkActionPerso
 
+// Liste des utilisateurs
 export const UserList = () => {
     const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down('sm'));
     return(
