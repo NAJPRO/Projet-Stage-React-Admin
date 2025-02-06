@@ -16,7 +16,8 @@ const postFilter = [
             { id: 'draft', name: 'Brouillon' }
         ]}
     />
-];
+]
+
 
 /**
  * Mise en place d'un message de confirmation pour les actions de suppression
@@ -42,7 +43,7 @@ export const PostList = () => (
             <DateField source="date" />
             <PostStatusField source="status" />
             <EditButton/>
-            <CustomBulkActionButtons/>
+            <DeleteWithConfirmButton/>
             <ShowButton/>
         </Datagrid>
     </List>
@@ -53,7 +54,7 @@ export const PostEdit = () => (
     <Edit>
         <SimpleForm>
             <TextInput source="id" disabled />
-            <TextInput source="title" />
+            <TextInput source="title" /> 
             <ReferenceInput source="userId" reference="users" />
             <DateInput source="date" />
             <SelectInput 
@@ -74,7 +75,7 @@ export const PostCreate = () => (
     <Create redirect="list">
         <SimpleForm>
             <TextInput source="title" validate={required()} />
-            <ReferenceInput source="userId" reference="users" validate={required()} />
+            <ReferenceInput source="userId" reference="users" />
             <DateInput source="date" />
             <SelectInput 
                 source="status" 

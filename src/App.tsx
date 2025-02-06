@@ -1,5 +1,4 @@
-import { Admin, Button, defaultI18nProvider, defaultLightTheme, nanoLightTheme, Resource } from "react-admin";
-import { useState } from "react";
+import { Admin, defaultLightTheme, Resource } from "react-admin";
 import { dataProvider } from "./dataProvider";
 
 import { UserEdit, UserList, UserShow } from "./users";
@@ -18,7 +17,7 @@ export const App = () => {
             authProvider={authProvider}
             dataProvider={dataProvider}
             dashboard={Dashboard}
-            lightTheme={nanoLightTheme}
+            lightTheme={defaultLightTheme}
             darkTheme={myCustomTheme}
             defaultTheme="light"
 

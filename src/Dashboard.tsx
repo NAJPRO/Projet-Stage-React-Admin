@@ -10,6 +10,7 @@ export const Dashboard = () => {
     const [postCount, setPostCount] = useState(0)
 
     useEffect(() => {
+        
         const fetchData = async () => {
             try {
                 const usersResponse = await fetch(import.meta.env.VITE_JSON_SERVER_URL + "/users")
@@ -78,6 +79,7 @@ export const Dashboard = () => {
                     </PieChart>
                 </CardContent>
             </Card>
+
             <Card style={{flex:1, minWidth: 300}}>
                 {/* <CardHeader title ="Mon tableau de bord"/> */}
                 <CardContent>
